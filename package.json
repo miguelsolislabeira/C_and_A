@@ -1,0 +1,27 @@
+{
+  "name": "c_and_a",
+  "version": "1.0.0",
+  "description": "Technical Assessment for Rindus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelsolislabeira/C%26A.git"
+  },
+  "keywords": [
+    "Test",
+    "automation",
+    "Cypress"
+  ],
+  "author": "Miguel Solís La Beira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelsolislabeira/C%26A/issues"
+  },
+  "homepage": "https://github.com/miguelsolislabeira/C%26A#readme",
+  "dependencies": {
+    "cypress": "^12.13.0"
+  }
+}
