@@ -1,4 +1,4 @@
-const accessPage = require("../pageObjects/AccessPage");
+const loginPage = require("../pageObjects/LoginPage");
 const myAccountPage = require("../pageObjects/MyAccountPage");
 const signUpPage = require("../pageObjects/SignUpPage");
 const homePage = require("../pageObjects/homePage");
@@ -18,7 +18,7 @@ describe("Sign Up", () => {
         homePage.getLogo().should('be.visible');
         homePage.clickOnAccountIcon();
 
-        accessPage.clickOnRegistrateAhoraLink();
+        loginPage.clickOnRegistrateAhoraLink();
         cy.url().should('contain', urls.SignUp);
         signUpPage.getNuevoClienteHeader().should('be.visible');
     })
@@ -40,7 +40,7 @@ describe("Sign Up", () => {
 
     });
 
-    it.only("Validation messages are displayed when submitting empty form", () => {
+    it("Validation messages are displayed when submitting empty form", () => {
 
         const msgs = Object.values(errorMessages);
         signUpPage.clickOnRegisterButton();
