@@ -7,7 +7,8 @@ class SignUpPage {
     privacyCheckbox = 'input[id = "register.confirmPrivacy"]';
     registerButton = "Registrarse ahora";
     nuevoClienteHeader = '¿Nuevo cliente?';
-    
+    passwordInput = 'input[id = "register.loginPassword"]';
+
     /*
     gender : "Mr", "Mrs", "Other"
     */
@@ -39,8 +40,15 @@ class SignUpPage {
         cy.contains(this.registerButton).click();
     }
 
-    getNuevoClienteHeader(){
+    getNuevoClienteHeader() {
         return cy.contains(this.nuevoClienteHeader);
+    }
+
+    getErrorMessages() {
+        return cy.get('p .error-required:visible')
+    }
+    getPasswordInput(){
+        return cy.get(this.passwordInput);
     }
 
 
