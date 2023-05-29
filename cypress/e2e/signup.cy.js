@@ -10,7 +10,7 @@ describe("Sign Up", () => {
         cy.visit('/')
     })
 
-    it('The user can register on the site', () => {
+    it('Users can register on the site', () => {
 
         homePage.clickOnAcceptCookiesButton();
         homePage.clickOnspanishLanguageOption();
