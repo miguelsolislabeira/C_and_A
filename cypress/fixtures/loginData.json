@@ -1,0 +1,17 @@
+{
+    "users": {
+        "validUser": {
+            "name": "valid user",
+            "email": "validuser@test.com",
+            "password": "fgx0s3M!"
+        },
+        "validUserWrongPassword": {
+            "email": "validuser@test.com",
+            "password": "bmnaf5T#"
+        },
+        "unRegisteredUser": {
+            "email": "unregistereduser@test.com",
+            "password": "tglpOg31!"
+        }
+    }
+}
