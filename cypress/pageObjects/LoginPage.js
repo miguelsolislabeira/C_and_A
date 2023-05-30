@@ -1,10 +1,13 @@
-class LoginPage {
+import BasePage from "./BasePage";
+
+class LoginPage extends BasePage {
 
     registrateAhoraLink = 'Regístrate ahora';
     emailInput = 'input[data-testid = "myaccount_login_email"]';
     passwordInput = 'input[data-testid = "myaccount_login_password"]';
-    loginButton = 'button[data-qa = "LoadingButton"]';
+    sessionButton = 'button[data-qa = "LoadingButton"]';
     failedLoginNotification = 'div[data-qa = "InlineNotification"] div';
+    irATuCuentaHeader = 'Ir a tu cuenta';
 
     clickOnRegistrateAhoraLink() {
         cy.contains(this.registrateAhoraLink).click();
@@ -18,12 +21,16 @@ class LoginPage {
         cy.get(this.passwordInput).clear().type(password);
     }
 
-    clickOnLoginButton() {
-        cy.get(this.loginButton).click();
+    clickOnSessionButton() {
+        cy.get(this.sessionButton).click();
     }
 
     getfailedLoginNotification() {
         return cy.get(this.failedLoginNotification).eq(1);
+    }
+
+    getHeader(){
+        return cy.contains(this.irATuCuentaHeader);
     }
 
 

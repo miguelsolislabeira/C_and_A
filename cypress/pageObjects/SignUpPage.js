@@ -1,4 +1,6 @@
-class SignUpPage {
+import BasePage from "./BasePage";
+
+class SignUpPage extends BasePage {
 
     firstNameInput = 'input[id = "register.firstName"]';
     lastNameInput = 'input[id = "register.lastName"]';

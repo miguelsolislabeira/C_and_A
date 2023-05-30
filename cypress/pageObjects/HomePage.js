@@ -1,4 +1,6 @@
-class HomePage {
+import BasePage from "./BasePage";
+
+class HomePage extends BasePage {
 
     acceptCookiesButton = '#onetrust-accept-btn-handler';
     spanishLanguageOption = '[data-qa = "FilterChipText"]';
