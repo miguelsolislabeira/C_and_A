@@ -1,7 +1,7 @@
-const loginPage = require("../pageObjects/LoginPage");
-const myAccountPage = require("../pageObjects/MyAccountPage");
-const signUpPage = require("../pageObjects/SignUpPage");
-const homePage = require("../pageObjects/homePage");
+import loginPage from '../pageObjects/LoginPage';
+import myAccountPage from '../pageObjects/MyAccountPage';
+import signUpPage from '../pageObjects/SignUpPage';
+import homePage from '../pageObjects/homePage';
 import { getRandomString, getRandomEmail, getRandomPassword } from '../support/utils';
 import { urls } from '../support/urls';
 import * as errorMessages from '../fixtures/signUpValidationMessages.json';
@@ -40,7 +40,7 @@ describe("Sign Up", () => {
 
     });
 
-    it("Validation messages are displayed when submitting empty form", () => {
+    it("Validation messages are displayed when submitting an empty form", () => {
 
         const msgs = Object.values(errorMessages);
         signUpPage.clickOnRegisterButton();
