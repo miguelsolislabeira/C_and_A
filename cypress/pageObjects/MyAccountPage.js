@@ -3,7 +3,7 @@ class MyAccountPage{
     signUpSuccessMessage = 'div .alert--success';
 
     getSignUpSuccessMessage(){
-        return cy.get(this.signUpSuccessMessage, {timeout:10000});
+        return cy.get(this.signUpSuccessMessage);
     }
 }
 module.exports = new MyAccountPage();
