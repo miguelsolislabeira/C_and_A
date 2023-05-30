@@ -1,4 +1,4 @@
-class LoginPage{
+class LoginPage {
 
     registrateAhoraLink = 'Regístrate ahora';
     emailInput = 'input[data-testid = "myaccount_login_email"]';
@@ -6,26 +6,26 @@ class LoginPage{
     loginButton = 'button[data-qa = "LoadingButton"]';
     failedLoginNotification = 'div[data-qa = "InlineNotification"] div';
 
-    clickOnRegistrateAhoraLink(){
+    clickOnRegistrateAhoraLink() {
         cy.contains(this.registrateAhoraLink).click();
     }
 
-    enterEmailAddress(emailAddress){
+    enterEmailAddress(emailAddress) {
         cy.get(this.emailInput).clear().type(emailAddress);
     }
 
-    enterPassword(password){
+    enterPassword(password) {
         cy.get(this.passwordInput).clear().type(password);
     }
 
-    clickOnLoginButton(){
+    clickOnLoginButton() {
         cy.get(this.loginButton).click();
     }
 
-    getfailedLoginNotification(){
+    getfailedLoginNotification() {
         return cy.get(this.failedLoginNotification).eq(1);
     }
 
-   
+
 }
 module.exports = new LoginPage();
