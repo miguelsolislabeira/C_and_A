@@ -1,8 +1,9 @@
 
-import homePage from "../pageObjects/homePage";
-import loginPage from "../pageObjects/LoginPage";
+import homePage from '../pageObjects/homePage';
+import loginPage from '../pageObjects/LoginPage';
 import { urls } from '../support/urls';
 import '../support/commands';
+import welcomePage from '../pageObjects/WelcomePage';
 import * as loginValidationMessages from '../fixtures/loginValidationsMessages.json';
 
 describe('Login functionality', () => {
@@ -24,8 +25,8 @@ describe('Login functionality', () => {
             cy.login(loginData.users.validUser.email,
                 loginData.users.validUser.password);
 
-                //TODO
-                //Assertions
+            welcomePage.getGreetingText()
+                .should('contain', loginData.users.validUser.name);
         })
 
     });
@@ -38,6 +39,8 @@ describe('Login functionality', () => {
 
             loginPage.getfailedLoginNotification().should('be.visible')
                 .and('have.text', loginValidationMessages.wrongCredentials);
+
+
         })
     })
 
