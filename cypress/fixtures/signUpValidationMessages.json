@@ -1,7 +1,3 @@
 {
-    "formOfAddress": "Elige un tratamiento.",
-    "firstName": "Indica tu nombre.",
-    "lastName": "Indica tus apellidos.",
-    "email": "Indica tu dirección de correo electrónico.",
-    "privacyDeclaration": "Por favor, acepta la política de privacidad"
+    "successSignUp": "Tu cuenta de cliente se ha creado correctamente."
 }
