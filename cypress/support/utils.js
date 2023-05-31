@@ -37,3 +37,10 @@ export function getRandomPassword() {
 
     return password;
 }
+
+export function getRandomGender(){
+    let genders = ["Mr", "Mrs", "Other"];
+    var selectedGender = genders[Math.floor(Math.random() * genders.length)];
+
+    return selectedGender;
+}

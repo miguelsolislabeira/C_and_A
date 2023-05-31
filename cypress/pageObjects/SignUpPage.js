@@ -11,10 +11,7 @@ class SignUpPage extends BasePage {
     nuevoClienteHeader = '¿Nuevo cliente?';
     passwordInput = 'input[id = "register.loginPassword"]';
 
-    /*
-    gender : "Mr", "Mrs", "Other"
-    */
-    checkGender(gender) {
+    checkGenderCheckbox(gender) {
         cy.get(`[value = '${gender}']`).check({ force: true });
     }
 

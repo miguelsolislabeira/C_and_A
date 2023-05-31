@@ -1,6 +1,6 @@
 import myAccountPage from '../pageObjects/MyAccountPage';
 import signUpPage from '../pageObjects/SignUpPage';
-import { getRandomString, getRandomEmail, getRandomPassword } from '../support/utils';
+import { getRandomString, getRandomEmail, getRandomPassword, getRandomGender } from '../support/utils';
 import { urls } from '../support/urls';
 import * as errorMessages from '../fixtures/signUpFormValidationMessages.json';
 import * as signUpValidationMessages from '../fixtures/signUpValidationMessages.json';
@@ -17,7 +17,7 @@ describe("Sign Up", () => {
 
     it('Users can register on the site', () => {
 
-        signUpPage.checkGender("Mrs");
+        signUpPage.checkGenderCheckbox(getRandomGender());
         signUpPage.enterFirstName(getRandomString());
         signUpPage.enterLastName(getRandomString());
         signUpPage.enterEmailAddress(getRandomEmail());
