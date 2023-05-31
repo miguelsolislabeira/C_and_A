@@ -44,7 +44,7 @@ describe('Login functionality', () => {
             .and('have.text', loginValidationMessages.wrongCredentials);
     })
 
-    it.only('Login incorrect with unregistered user', () => {
+    it('Login incorrect with unregistered user', () => {
       
         cy.login(loginData.users.unRegisteredUser.email,
             loginData.users.unRegisteredUser.password);

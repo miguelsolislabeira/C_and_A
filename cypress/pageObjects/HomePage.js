@@ -2,15 +2,10 @@ import BasePage from "./BasePage";
 
 class HomePage extends BasePage {
 
-    acceptCookiesButton = '#onetrust-accept-btn-handler';
     spanishLanguageOption = '[data-qa = "FilterChipText"]';
     confirmLanguageButton = '[data-qa = "LoadingButton"]';
     accountIcon = '[data-qa = "HeaderAccountButton"]';
     logo = 'svg[data-qa = "Logo"]';
-
-    clickOnAcceptCookiesButton() {
-        cy.get(this.acceptCookiesButton).click();
-    }
 
     clickOnspanishLanguageOption() {
         cy.get(this.spanishLanguageOption).first().click();
