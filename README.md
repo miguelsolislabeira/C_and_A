@@ -68,3 +68,5 @@
 2. Select "E2E2" option.
 3. Select the browser and click on the button.
 4. Click on the spec to be executed.
+
+You can access the videos of the tests execution by clicking [here](https://drive.google.com/drive/folders/1f4b2A6hiUwFIhTxzoN5AL5M4vQv5cftr?usp=sharing)
