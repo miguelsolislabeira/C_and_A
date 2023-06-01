@@ -21,7 +21,7 @@
     "url": "https://github.com/miguelsolislabeira/C%26A/issues"
   },
   "homepage": "https://github.com/miguelsolislabeira/C%26A#readme",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "^12.13.0"
   }
 }
