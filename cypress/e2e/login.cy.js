@@ -1,4 +1,4 @@
-import homePage from '../pageObjects/homePage';
+import homePage from '../pageObjects/HomePage';
 import loginPage from '../pageObjects/LoginPage';
 import { urls } from '../support/urls';
 import '../support/commands';
@@ -8,8 +8,10 @@ import loginData from '../fixtures/loginData.json';
 
 describe('Login functionality', () => {
 
+    let emailAddress;
+    let password;
     beforeEach(() => {
-        
+
         homePage.goTo(urls.Home);
         homePage.getUrl().should('contain', urls.Home);
         homePage.clickOnAcceptCookiesButton();
@@ -23,34 +25,43 @@ describe('Login functionality', () => {
     });
 
     it('Login correct with valid credentials', () => {
-        
-        cy.login(loginData.users.validUser.email,
-                loginData.users.validUser.password);
+        emailAddress = loginData.users.validUser.email;
+        password = loginData.users.validUser.password;
+
+        cy.login(emailAddress, password);
 
         welcomePage.getGreetingText()
-                .should('contain', loginData.users.validUser.name);
-        
+            .should('contain', loginData.users.validUser.name);
+
         cy.logout();
         loginPage.getHeader().should('be.visible');
 
     });
 
     it('Login incorrect with incorrect password', () => {
-      
-        cy.login(loginData.users.validUserWrongPassword.email,
-            loginData.users.validUserWrongPassword.password);
+        emailAddress = loginData.users.validUserWrongPassword.email;
+        password = loginData.users.validUserWrongPassword.password;
+
+        cy.login(emailAddress, password);
 
         loginPage.getfailedLoginNotification().should('be.visible')
             .and('have.text', loginValidationMessages.wrongCredentials);
-    })
+
+    });
 
     it('Login incorrect with unregistered user', () => {
-      
-        cy.login(loginData.users.unRegisteredUser.email,
-            loginData.users.unRegisteredUser.password);
-    
+        emailAddress = loginData.users.unRegisteredUser.email;
+        password = loginData.users.unRegisteredUser.password;
+
+        cy.login(emailAddress, password);
+
         loginPage.getfailedLoginNotification().should('be.visible')
             .and('have.text', loginValidationMessages.wrongCredentials);
-       
-    })
-})
+
+    });
+
+    afterEach(() => {
+        cy.interceptRequests();
+    });
+
+});
