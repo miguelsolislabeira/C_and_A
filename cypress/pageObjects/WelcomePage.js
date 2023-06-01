@@ -3,7 +3,7 @@ class WelcomePage {
     greetingText = "Hola";
 
     getGreetingText() {
-        return cy.get('h1').contains(this.greetingText);
+        return cy.get('span').contains(this.greetingText);
     }
 }
 module.exports = new WelcomePage();

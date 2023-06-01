@@ -29,7 +29,7 @@ class LoginPage extends BasePage {
         return cy.get(this.failedLoginNotification).eq(1);
     }
 
-    getHeader(){
+    getHeader() {
         return cy.get('span').contains(this.irATuCuentaHeader);
     }
 

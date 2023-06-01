@@ -40,13 +40,13 @@ class SignUpPage extends BasePage {
     }
 
     getNuevoClienteHeader() {
-        return cy.get('button').contains(this.nuevoClienteHeader);
+        return cy.get('h3').contains(this.nuevoClienteHeader);
     }
 
     getErrorMessages() {
         return cy.get('p .error-required:visible')
     }
-    getPasswordInput(){
+    getPasswordInput() {
         return cy.get(this.passwordInput);
     }
 
