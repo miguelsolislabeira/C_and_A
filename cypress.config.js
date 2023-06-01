@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://c-and-a.com' 
+    baseUrl: 'https://c-and-a.com',
+    defaultCommandTimeout: 6000,
   },
 });
