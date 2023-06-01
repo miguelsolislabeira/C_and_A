@@ -2,9 +2,9 @@ import BasePage from "./BasePage";
 
 class HomePage extends BasePage {
 
-    spanishLanguageOption = '[data-qa = "FilterChipText"]';
-    confirmLanguageButton = '[data-qa = "LoadingButton"]';
-    accountIcon = '[data-qa = "HeaderAccountButton"]';
+    spanishLanguageOption = 'button[data-qa = "FilterChipText"]';
+    confirmLanguageButton = 'button[data-qa = "LoadingButton"]';
+    accountIcon = 'button[data-qa = "HeaderAccountButton"]';
     logo = 'svg[data-qa = "Logo"]';
 
     clickOnspanishLanguageOption() {

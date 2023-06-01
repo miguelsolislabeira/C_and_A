@@ -36,11 +36,11 @@ class SignUpPage extends BasePage {
     }
 
     clickOnRegisterButton() {
-        cy.contains(this.registerButton).click();
+        cy.get('button').contains(this.registerButton).click();
     }
 
     getNuevoClienteHeader() {
-        return cy.contains(this.nuevoClienteHeader);
+        return cy.get('button').contains(this.nuevoClienteHeader);
     }
 
     getErrorMessages() {

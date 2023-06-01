@@ -10,7 +10,7 @@ class LoginPage extends BasePage {
     irATuCuentaHeader = 'Ir a tu cuenta';
 
     clickOnRegistrateAhoraLink() {
-        cy.contains(this.registrateAhoraLink).click();
+        cy.get('span').contains(this.registrateAhoraLink).click();
     }
 
     enterEmailAddress(emailAddress) {
@@ -30,7 +30,7 @@ class LoginPage extends BasePage {
     }
 
     getHeader(){
-        return cy.contains(this.irATuCuentaHeader);
+        return cy.get('span').contains(this.irATuCuentaHeader);
     }
 
 
